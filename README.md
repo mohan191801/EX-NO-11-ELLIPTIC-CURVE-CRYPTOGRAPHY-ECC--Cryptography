@@ -1,29 +1,27 @@
-# EX-NO-11-ELLIPTIC-CURVE-CRYPTOGRAPHY-ECC
-
-## Aim:
+EX-NO-11-ELLIPTIC-CURVE-CRYPTOGRAPHY-ECC
+NAME: MOAHN M
+REG NO: 2305001018
+Aim:
 To Implement ELLIPTIC CURVE CRYPTOGRAPHY(ECC)
 
+ALGORITHM:
+Elliptic Curve Cryptography (ECC) is a public-key cryptography technique based on the algebraic structure of elliptic curves over finite fields.
 
-## ALGORITHM:
+Initialization:
 
-1. Elliptic Curve Cryptography (ECC) is a public-key cryptography technique based on the algebraic structure of elliptic curves over finite fields.
+Select an elliptic curve equation ( y^2 = x^3 + ax + b ) with parameters ( a ) and ( b ), along with a large prime ( p ) (defining the finite field).
+Choose a base point ( G ) on the curve, which will be used for generating public keys.
+Key Generation:
 
-2. Initialization:
-   - Select an elliptic curve equation \( y^2 = x^3 + ax + b \) with parameters \( a \) and \( b \), along with a large prime \( p \) (defining the finite field).
-   - Choose a base point \( G \) on the curve, which will be used for generating public keys.
+Each party selects a private key ( d ) (a random integer).
+Calculate the public key as ( Q = d \times G ) (using elliptic curve point multiplication).
+Encryption and Decryption:
 
-3. Key Generation:
-   - Each party selects a private key \( d \) (a random integer).
-   - Calculate the public key as \( Q = d \times G \) (using elliptic curve point multiplication).
+Encryption: The sender uses the recipient’s public key and the base point ( G ) to encode the message.
+Decryption: The recipient uses their private key to decode the message and retrieve the original plaintext.
+Security: ECC’s security relies on the Elliptic Curve Discrete Logarithm Problem (ECDLP), making it highly secure with shorter key lengths compared to traditional methods like RSA.
 
-4. Encryption and Decryption:
-   - Encryption: The sender uses the recipient’s public key and the base point \( G \) to encode the message.
-   - Decryption: The recipient uses their private key to decode the message and retrieve the original plaintext.
-
-5. Security: ECC’s security relies on the Elliptic Curve Discrete Logarithm Problem (ECDLP), making it highly secure with shorter key lengths compared to traditional methods like RSA.
-
-## Program:
-```
+Program:
 #include <stdio.h> 
 typedef struct { 
     long long int x, y; 
@@ -95,12 +93,11 @@ printf("Key exchange failed. Shared secrets do not match.\n");
 } 
 return 0; 
 }
-```
+Output:
+<img width="1016" height="390" alt="image" src="https://github.com/user-attachments/assets/0005c64c-e4f6-4aa3-8fb0-10da7db9a435" />
+<img width="1013" height="391" alt="image" src="https://github.com/user-attachments/assets/da3fcca1-adfd-49f9-bdbc-dec430f48f2a" />
 
 
-## Output:
 
-
-
-## Result:
+Result:
 The program is executed successfully
